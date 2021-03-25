@@ -3,13 +3,13 @@
 This is a template project for "Modern methods and technologies of software development" course labs. Use it to create
 your own repository and fulfill/rewrite this document (at least, replace everything in `{...}`).
 
-## Команда
+## Team
 
 - { Student's Name and Surname (in English) } { email } — { GitHub account }
 - ...
 - { Student's Name and Surname (in English) } { email } — { GitHub account }
 
-## Дизайн документ
+## Design document
 
 The [design document]({Place actual link to the design document Google Docs file here, see Laboratory assignment #1})
 describes architecture and implementation details of this project.
@@ -76,4 +76,4 @@ You can use the following tools to work with the REST API
 3. `PUT` `/resource/{some key}`, JSON `{"value": "some value here"}` --- this endpoint is protected. In order to visit
    it you should pass `Authorization: Bearer <some token>` header with your request. This request will store the
    value `some value here` under the `some key`, and saved value will be available for retrieval later using
-   the `GET /resource/{some key}` endpoint. Will return `409 conflict` if key `some key` is already used.   
+   the `GET /resource/{some key}` endpoint. Will return `409 conflict` if key `some key` is already used.
