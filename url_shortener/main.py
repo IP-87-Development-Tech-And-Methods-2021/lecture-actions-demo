@@ -13,6 +13,7 @@ from pyramid.renderers import JSON
 
 
 class UJSONRenderer(JSON):
+    """Custom JSON Renderer for greater performance. You do not need to edit it"""
     def __init__(self, adapters=(), **kw):
         super().__init__(serializer=json.dumps, adapters=adapters, **kw)
 
@@ -34,6 +35,7 @@ class UJSONRenderer(JSON):
 
 
 def make_app(app_config: Config):
+    """ This function creates application instance from app_config given"""
     config = Configurator()
 
     # replacing standard renderer with faster one
@@ -48,6 +50,7 @@ def make_app(app_config: Config):
     config.registry.base_url: str = app_config.base_url
     config.registry.logic = Logic(storage=storage)
 
+    # Setup authentication and authorization from `.auth` module
     config.set_authentication_policy(TokenAuthenticationPolicy())
     config.set_authorization_policy(ACLAuthorizationPolicy())
 

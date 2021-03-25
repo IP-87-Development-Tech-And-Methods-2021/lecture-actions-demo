@@ -1,5 +1,7 @@
+"""Logging configuration is here"""
+
+
 def configure_logging():
-    import logging
     import logging.config
     LOGGING = {
         'version': 1,
@@ -7,7 +9,7 @@ def configure_logging():
         'formatters': {
             'standard': {
                 'format': '%(levelname)s:%(name)s: %(message)s '
-                '(%(asctime)s; %(filename)s:%(lineno)d)',
+                          '(%(asctime)s; %(filename)s:%(lineno)d)',
                 'datefmt': "%Y-%m-%d %H:%M:%S",
             }
         },

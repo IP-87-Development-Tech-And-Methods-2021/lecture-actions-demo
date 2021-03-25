@@ -10,6 +10,7 @@ PROTECTED = 'url_shortener.auth.protected'
 
 
 def setup_routes(config):
+    """ Configures application routes"""
     # Add public resources
     config.add_view(public_resource_example,
                     route_name='public_resource_example',
@@ -17,6 +18,8 @@ def setup_routes(config):
     config.add_route('public_resource_example', '/public')
 
     # Add protected resources
+    # pass `factory=PROTECTED` to the `add_route` method
+    # in order to make this resource available for authenticated users only
     config.add_route('protected_resource_write_example',
                      request_method='PUT',
                      pattern='/resource/{key}',

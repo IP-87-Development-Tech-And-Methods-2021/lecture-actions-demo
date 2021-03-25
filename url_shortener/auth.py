@@ -1,5 +1,6 @@
 """
-This module holds all authentication/authorization related code
+This module holds all authentication/authorization related code.
+You probably do not need to mess with it
 """
 from typing import Optional
 

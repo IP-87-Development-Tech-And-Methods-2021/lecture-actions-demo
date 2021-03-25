@@ -1,3 +1,4 @@
+"""This module contains various examples on how to implement an endpoint"""
 import http.client as httplib
 from url_shortener.logic import Logic
 

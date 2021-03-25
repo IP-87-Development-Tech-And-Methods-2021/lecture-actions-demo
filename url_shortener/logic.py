@@ -6,12 +6,18 @@ from url_shortener.dto import User
 
 
 class Logic:
+    """This class implements application logic"""
+
     def __init__(self, storage: Storage):
+        """ Creating an instance of our logic. Pay attention that storage is not created within the logic, but
+        passed as a parameter from outside. This is called Dependency Injection.
+        """
         super().__init__()
         self._storage: Storage = storage
         self._check_and_write_lock: Lock = Lock()
 
     def get_example(self, key: str) -> Optional[str]:
+        """Retrieves data from storage by key"""
         return self._storage.read(key)
 
     def save_example_if_not_exists(self, key: str, value: str) -> bool:
