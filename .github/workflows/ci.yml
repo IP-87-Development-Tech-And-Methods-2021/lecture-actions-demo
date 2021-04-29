@@ -32,7 +32,7 @@ jobs:
         pip install mypy
 
     - name: Run type checks with mypy
-      run: mypy
+      run: mypy url_shortener
 
   check-codestyle:
     runs-on: ubuntu-latest
