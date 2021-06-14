@@ -5,6 +5,7 @@ pyramid
 trafaret
 # library for faster json operations
 ujson
+types-ujson
 # web server which serves our application
 waitress
 

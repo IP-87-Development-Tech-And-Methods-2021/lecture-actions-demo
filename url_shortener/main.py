@@ -47,7 +47,7 @@ def make_app(app_config: Config):
     # setup "global" objects into the registry
     storage = InMemoryStorage()
 
-    config.registry.base_url: str = app_config.base_url
+    config.registry.base_url = app_config.base_url
     config.registry.logic = Logic(storage=storage)
 
     # Setup authentication and authorization from `.auth` module
