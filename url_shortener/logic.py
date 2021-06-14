@@ -9,8 +9,9 @@ class Logic:
     """This class implements application logic"""
 
     def __init__(self, storage: Storage):
-        """ Creating an instance of our logic. Pay attention that storage is not created within the logic, but
-        passed as a parameter from outside. This is called Dependency Injection.
+        """ Creating an instance of our logic. Pay attention that storage is
+        not created within the logic, but passed as a parameter from outside.
+        This is called Dependency Injection.
         """
         super().__init__()
         self._storage: Storage = storage

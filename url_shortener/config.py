@@ -1,5 +1,6 @@
 """
-This module is responsible for reading application config from environment variables
+This module is responsible for reading application config from environment
+variables
 """
 import logging
 import os

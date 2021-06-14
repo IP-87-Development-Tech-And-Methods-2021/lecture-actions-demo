@@ -13,7 +13,9 @@ from pyramid.renderers import JSON
 
 
 class UJSONRenderer(JSON):
-    """Custom JSON Renderer for greater performance. You do not need to edit it"""
+    """Custom JSON Renderer for greater performance. You do not need to edit
+    it
+    """
     def __init__(self, adapters=(), **kw):
         super().__init__(serializer=json.dumps, adapters=adapters, **kw)
 
